@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-angular
-    .module('blocChat', ['ui.router','firebase'])
-    .config(config);
-
- })();
-=======
 (function() {
     function config($stateProvider, $locationProvider) {
         $locationProvider
@@ -24,7 +17,6 @@ angular
 
     
     angular
-        .module('blocChat', ['ui.router', 'firebase'])
+        .module('blocChat', ['ui.router', 'firebase', 'ui.bootsrap'])
         .config(config);
 })();
->>>>>>> list-chat-rooms

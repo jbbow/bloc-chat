@@ -2,42 +2,26 @@
 <html ng-app="blocChat">
 <head lang="en">
     <meta charset="UTF-8">
-<<<<<<< HEAD
-    <title>Bloc Base Project</title>
-    <link rel="stylesheet" href="/styles/style.css">
-</head>
-<body>
-    <script src="/scripts/app.js"></script>
-    <!-- Angular -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-
-<!-- AngularFire -->
-    <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
-    
-    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
-    <script>
-  // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyDP6xElQdjVbyvzU4B8NI0fRlY147Dv1Vw",
-        authDomain: "bloc-chat-b5e61.firebaseapp.com",
-        databaseURL: "https://bloc-chat-b5e61.firebaseio.com",
-        storageBucket: "bloc-chat-b5e61.appspot.com",
-        messagingSenderId: "593431154777"
-    };
-    firebase.initializeApp(config);
-</script>   
-=======
     <title>Bloc Chat</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
     
   <section>
     <ui-view></ui-view>
-  </section>   
+  </section>
   
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
   <!-- Angular -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.js"></script>
   
   <!-- UI Router -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
@@ -63,6 +47,6 @@
   <script src="/scripts/app.js"></script>
   <script src="/scripts/controllers/RoomCtrl.js"></script>
   <script src="/scripts/services/Room.js"></script>
->>>>>>> list-chat-rooms
+  <script src="/scripts/controllers/ModalInstanceCtrl.js"></script>
 </body>
 </html>
