@@ -1,6 +1,6 @@
     
 (function() {
-    function ModalInstanceCtrl(Room, $uibModalInstancethis) {
+    function ModalInstanceCtrl($uibModalInstance) {
         this.ok = function () {
             $uibModalInstance.close();
           };

@@ -3,7 +3,9 @@
     function RoomCtrl(Room, $uibModal) {
         this.allRooms = Room.all;
         
-        this.open = function () {
+        var $ctrl = this;
+        
+        $ctrl.openModal = function () {
             var modalInstance = $uibModal.open({
               templateUrl: '/templates/roomModal.html',
               controller: 'ModalInstanceCtrl',
