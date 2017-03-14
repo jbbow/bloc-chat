@@ -1,7 +1,10 @@
     
 (function() {
-    function RoomCtrl(Room, $uibModal) {
+    function RoomCtrl(Room, Message, $uibModal) {
         this.allRooms = Room.all;
+        this.currentRoom = null;
+        this.messages = null;
+        
         
         // we created a fucntion to open the modal using $uibModals
         this.openModal = function () {
@@ -21,10 +24,21 @@
               Room.add(newRoomName)
             });
           };
+        //this is a $scope object where the active room will be stored.
+        //First we have to have a function to set up the current room.  We pass the argument room
+        //and then set currentRoom
+        this.setCurrentRoom = function(room){
+            this.currentRoom = room;
+            this.messages = Message.getByRoomId(room.$id)
+            console.log(this.messages);
+        }
+        
+        
+        
 
     }
 
 angular
         .module('blocChat')
-        .controller('RoomCtrl', ['Room', '$uibModal', RoomCtrl]);
+        .controller('RoomCtrl', ['Room', 'Message', '$uibModal', RoomCtrl]);
 })();

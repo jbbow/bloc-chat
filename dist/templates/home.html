@@ -1,14 +1,13 @@
-<<<<<<< HEAD
-<section>    
-  <div class="side-bar">
-    <h1>Bloc Chat</h1>
-=======
 <section >    
   <div class="side-bar" >
     <h1>Bloc Chat</h1> <button type="button" class="btn btn-primary" ng-click="rooms.openModal()">Open me!</button>
->>>>>>> create-chat-rooms
-    <div class="list" ng-repeat="room in rooms.allRooms">{{ room.name }}</div></div>
-    <div class="main"></div>
+    <div class="list" ng-repeat="room in rooms.allRooms" ng-click="rooms.setCurrentRoom(room)">{{ room.name }}</div></div>
+    <div class="main">
+        <h1>{{ rooms.currentRoom.name }}</h1>
+        <div class="messages" ng-repeat="message in rooms.messages">
+            {{ message.content }} {{message.username }} {{ message.sentAt }}
+        </div>
+    </div>
     
       </section>
      
