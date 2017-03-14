@@ -1,6 +1,6 @@
     
 (function() {
-    function ModalInstanceCtrl($uibModalInstance) {
+    function ModalInstanceCtrl(Room, $uibModalInstance, $cookies) {
         // this is inside the modal
         
         // set our ngModel variable to use to store the room name
@@ -16,9 +16,14 @@
         this.cancel = function () {
             $uibModalInstance.dismiss('cancel');
         };
+        
+        this.createUsername = function () {
+            $cookies.put('blocChatCurrentUser', this.userName);
+            $uibModalInstance.close();
+        }
     }
 
 angular
         .module('blocChat')
-        .controller('ModalInstanceCtrl', ['$uibModalInstance', ModalInstanceCtrl]);
+        .controller('ModalInstanceCtrl', ['Room', '$uibModalInstance', '$cookies', ModalInstanceCtrl]);
 })();
