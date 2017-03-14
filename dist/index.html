@@ -12,7 +12,6 @@
   <section>
     <ui-view></ui-view>
   </section>
-  
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     
   <!-- Latest compiled and minified JavaScript -->
@@ -43,11 +42,15 @@
   };
   firebase.initializeApp(config);
 </script>
-
-  <script src="/scripts/app.js"></script>
+    
+        <!--Cookies-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-cookies.js"></script>
+    
+  <script src="/scripts/app.js"></script> 
   <script src="/scripts/controllers/RoomCtrl.js"></script>
   <script src="/scripts/services/Room.js"></script>
-    <script src="/scripts/services/Message.js"></script>
+  <script src="/scripts/services/Message.js"></script>
   <script src="/scripts/controllers/ModalInstanceCtrl.js"></script>
+  <script src="/scripts/services/BlocChatCookies.js"></script>
 </body>
 </html>
