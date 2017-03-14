@@ -3,16 +3,18 @@
     var ref = firebase.database().ref().child("messages");
     var messages = $firebaseArray(ref);
       
-    var getByRoomId = function (roomId) {
-          console.log('roomId',roomId)
-        // Filter the messages by their room ID.
-          var msgs = ref.orderByChild('roomId').equalTo(roomId);
-          return $firebaseArray(msgs);
-      }
+    Message.getByRoomId = function (roomId) {
+            return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
+        }
+    
+    Message.send = function (newMessage) {
+            messages.$add(newMessage);
+            newMessage.sentAt = firebase.database.ServerValue.TIMESTAMP;
+        
+        }
 
-    return {
-      getByRoomId: getByRoomId
-    };
+    return Message;
+     
   }
 
   angular

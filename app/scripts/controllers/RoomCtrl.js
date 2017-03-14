@@ -30,8 +30,14 @@
         //and then set currentRoom
         this.setCurrentRoom = function(room){
             this.currentRoom = room;
-            this.messages = Message.getByRoomId(room.$id)
+            this.messages = Message.getByRoomId(this.currentRoom.$id)
             console.log(this.messages);
+        }
+        
+        this.sendMessage = function () {
+            this.newMessage.roomId = this.currentRoom.$id;
+            this.newMessage.username = this.currentUser;
+            Message.send(this.newMessage);
         }
         
         
