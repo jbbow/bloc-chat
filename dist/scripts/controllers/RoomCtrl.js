@@ -31,7 +31,6 @@
         this.setCurrentRoom = function(room){
             this.currentRoom = room;
             this.messages = Message.getByRoomId(this.currentRoom.$id)
-            console.log(this.messages);
         }
         
         this.sendMessage = function () {

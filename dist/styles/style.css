@@ -25,3 +25,9 @@ h1 {
     font-size: 24px;
     font-family: sans-serif;
 }
+
+.message-field {
+    bottom: 0;
+    padding-bottom: 5px;
+    position: fixed;
+}
