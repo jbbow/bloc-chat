@@ -9,8 +9,7 @@
                 keyboard: false,
                 backdrop: 'static'
             });
-       
-    }
+        }
   }
 
   angular

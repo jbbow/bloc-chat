@@ -5,7 +5,7 @@
     <div class="main">
         <h1>{{ rooms.currentRoom.name }}</h1>
         <div class="messages" ng-repeat="message in rooms.messages">
-            {{ message.content }} {{message.username }} {{ message.sentAt }}
+            {{ message.content }} {{message.username }} {{ message.sentAt | date : "shortTime" }}
         </div>
     </div>
     <div class="message-field">

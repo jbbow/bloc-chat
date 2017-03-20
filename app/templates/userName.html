@@ -1,9 +1,9 @@
 <div class="modal-header">
-    <h3 class="modal-title" id="modal-title">Enter your username...please.</h3>
+    <h3 class="modal-title" id="modal-title">Enter your username</h3>
 </div>
 <div class="modal-body" id="modal-body">
     <input type="text" ng-model="modal.userName" />
 </div>
 <div class="modal-footer">
-    <button class="btn btn-primary" type="button" ng-click="modal.createUsername()">Create user</button>
+    <button class="btn btn-primary" type="button" ng-click="modal.createUsername()" ng-disabled="modal.username == null">Create user</button>
 </div>

@@ -37,10 +37,7 @@
             this.newMessage.roomId = this.currentRoom.$id;
             this.newMessage.username = this.currentUser;
             Message.send(this.newMessage);
-        }
-        
-        
-        
+        }  
 
     }
 
