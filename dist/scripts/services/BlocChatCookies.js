@@ -5,9 +5,8 @@
       $uibModal.open({
                 templateUrl: '/templates/userName.html',
                 size: 'sm',
-                controller: 'ModalInstanceCtrl as modal',
-                keyboard: false,
-                backdrop: 'static'
+                controller: 'ModalInstanceCtrl',
+                controllerAs: 'modal'
             });
         }
   }
@@ -16,3 +15,5 @@
     .module('blocChat')
     .run(['$cookies', '$uibModal', BlocChatCookies]);
 })();
+
+

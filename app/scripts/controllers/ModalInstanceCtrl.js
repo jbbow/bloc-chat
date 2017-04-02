@@ -6,12 +6,12 @@
         };
         
         modal.createRoom = function () {
-            Room.add(modal.newRoom);
+            Room.add(modal.roomName);
             $uibModalInstance.close();
         };
         
         modal.createUsername = function () {
-            $cookies.put('blocChatCurrentUser', modal.username);
+            $cookies.put('blocChatCurrentUser', modal.userName);
             $uibModalInstance.close();
         }
     }

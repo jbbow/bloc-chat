@@ -5,6 +5,7 @@
         this.currentRoom = null;
         this.messages = null;
         this.currentUser = $cookies.get('blocChatCurrentUser');
+        this.newMessage = null;
         
         
         // we created a fucntion to open the modal using $uibModals
@@ -34,9 +35,12 @@
         }
         
         this.sendMessage = function () {
-            this.newMessage.roomId = this.currentRoom.$id;
-            this.newMessage.username = this.currentUser;
-            Message.send(this.newMessage);
+            if(this.newMessage) {
+                this.newMessage.roomId = this.currentRoom.$id;
+                this.newMessage.username = this.currentUser;
+                Message.send(this.newMessage);
+                this.newMessage = null;   
+            }            
         }  
 
     }
