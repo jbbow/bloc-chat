@@ -19,6 +19,7 @@ section {
     height: 100%;
     background-color: #fff;
     float:right; 
+    padding: 40px;
 }
 
 h1 {
@@ -30,4 +31,19 @@ h1 {
     bottom: 0;
     padding-bottom: 5px;
     position: fixed;
+    right: 0px;
 }
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    float: right;
+}
+
+.message-box {
+    width: 568px!important;
+}
+
+
+
+
